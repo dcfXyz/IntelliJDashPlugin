@@ -91,6 +91,22 @@ public class SearchService {
         launcher.search(new ArrayList<>(), query);
     }
 
+    public void unitySearch(@Nonnull Editor editor, @Nullable Project project, @Nullable PsiFile psiFile)
+    {
+        PsiElement psiElement = getPsiElementAtCursor(editor, project, psiFile);
+        String query = getSearchQueryFromEditor(editor, psiElement);
+
+        if ( query == null ) {
+            return;
+        }
+
+        query = "unity3d:" + query;
+
+        // open dash
+        showStatusMessage(project, null, null);
+        launcher.search(new ArrayList<>(), query);
+    }
+
     public void smartSearch(@Nonnull Editor editor, @Nullable Project project, @Nullable PsiFile psiFile, @Nullable VirtualFile virtualFile)
     {
         PsiElement psiElement = getPsiElementAtCursor(editor, project, psiFile);

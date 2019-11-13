@@ -1,6 +1,6 @@
 package de.dreamlab.dash.keywords;
 
-import com.sun.istack.internal.Nullable;
+import com.sun.istack.Nullable;
 import de.dreamlab.dash.LookupInfoDictionary;
 
 public interface IKeyword {

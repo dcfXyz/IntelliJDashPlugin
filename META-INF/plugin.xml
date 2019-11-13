@@ -92,8 +92,13 @@
     <!-- Add your actions here -->
       <action id="SmartSearchAction" class="de.dreamlab.dash.SmartSearchAction" text="Smart-Search Documentation" description="Searches word under caret or selection in documentation filtered by currently used language">
           <add-to-group group-id="ToolsMenu" anchor="last"/>
-          <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift D"/>
+          <keyboard-shortcut keymap="$default" first-keystroke="alt shift D"/>
       </action>
+
+    <action id="UnitySearchAction" class="de.dreamlab.dash.UnitySearchAction" text="Unity-Search Documentation" description="Searches word under caret or selection in documentation with unity3d tag">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift D"/>
+    </action>
 
     <action id="SearchAction" class="de.dreamlab.dash.SearchAction" text="Search all Documentation" description="Searches word under caret or selection in documentation">
       <add-to-group group-id="ToolsMenu" anchor="last"/>
